@@ -1,0 +1,75 @@
+Order of table creation 
+
+Users-> Movies->Casts->Actors-> Review
+
+Users table -
+CREATE TABLE users (
+    user_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    user_name VARCHAR(255),
+    user_email VARCHAR(255) UNIQUE,
+    user_password VARCHAR(255)
+);
+
+movies table-
+CREATE TABLE movies (
+    movie_id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    movie_name VARCHAR(255) NOT NULL UNIQUE,
+    lang VARCHAR(255),
+    yor INT,
+    genre VARCHAR(255),
+    trailer_link  VARCHAR(255),
+    aggregated_rating DOUBLE,
+    big_poster VARCHAR(255),
+    small_poster VARCHAR(255),desc varchar(10000),actors varchar(1000),director varchar(255),production varchar(255)
+);
+
+
+casts table-
+CREATE TABLE casts (
+    movie_id INT NOT NULL,
+    writer VARCHAR(255),
+    director VARCHAR(255),
+    production VARCHAR(255),
+    FOREIGN KEY (movie_id) REFERENCES movies (movie_id)
+);
+
+actors table-
+CREATE TABLE actors (
+    actor_id INT NOT NULL  AUTO_INCREMENT PRIMARY KEY,
+    movie_id INT,
+    actor_name VARCHAR(255),
+    FOREIGN KEY (movie_id) REFERENCES movies(movie_id)
+);
+
+review table-
+CREATE TABLE Review (
+    review_id INT NOT NULL  AUTO_INCREMENT PRIMARY KEY,
+    movie_id INT NOT NULL,
+    likes INT,
+    user_id INT,
+    user_name VARCHAR(255),
+    review_desc VARCHAR(MAX),
+    review_rating INT NOT NULL,
+ FOREIGN KEY (movie_id) REFERENCES movies(movie_id),
+FOREIGN KEY (user_id) REFERENCES users(user_id)
+);
+
+
+Some notes-
+
+While updating we have to give all the fields, and update the fields for any changes.
+
+DROP TABLE ACTORS;
+DROP TABLE CASTS;
+
+ALTER TABLE MOVIES
+ADD desc varchar(10000);
+
+ALTER TABLE MOVIES
+ADD actors varchar(1000);
+
+ALTER TABLE MOVIES
+ADD director varchar(255);
+
+ALTER TABLE MOVIES
+ADD production varchar(255);
