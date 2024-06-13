@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Movie Info Collection Form</title>
+<link rel="stylesheet" href="form.css">
+</head>
+<body>
+<div class="container">
+  <h2>Movie Info Collection Form</h2>
+  <form id="movieForm">
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="movieName" required>
+    </div>
+    <div class="form-group">
+      <label for="desc">About Movie:</label>
+      <textarea name="desc" cols="70" rows="10" required></textarea>
+    </div>
+    <div class="form-group">
+      <label for="language">Language:</label>
+      <input type="text" id="language" name="movieLanguage" required>
+    </div>
+    <div class="form-group">
+      <label for="genre">Genre:</label>
+      <input type="text" id="genre" name="movieGenre" required>
+    </div>
+    <div class="form-group">
+      <label for="posterLink">Poster Link:</label>
+      <input type="url" id="posterLink" name="smallPoster" required>
+    </div>
+    <div class="form-group">
+      <label for="trailerLink">Trailer YouTube Link:</label>
+      <input type="url" id="trailerLink" name="trailerUrl" >
+    </div>
+    <div class="form-group">
+      <label for="releaseYear">Year of Release:</label>
+      <input type="number" id="releaseYear" name="movieYear" value="2020" required>
+    </div>
+    <div class="form-group">
+      <label for="actorname">Cast Names:</label>
+      <input type="text" id="actorNames" name="actorName">
+    </div>
+    <div class="form-group">
+      <label for="writer">Writers:</label>
+      <input type="text" id="writer" name="writer">
+    </div>
+    <div class="form-group">
+      <label for="castNames">Director:</label>
+      <input type="text" id="Director" name="director">
+    </div>
+    <div class="form-group">
+      <label for="castNames">Production:</label>
+      <input type="text" id="Production" name="production">
+    </div>
+    <div class="form-group">
+      <input type="submit" value="Submit">
+    </div>
+  </form>
+</div>
+
+<script>
+  document.getElementById('movieForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    var formData = new FormData(this);
+    var movieInfo = {};
+    formData.forEach(function(value, key) {
+      movieInfo[key] = value;
+    });
+    console.log(movieInfo);
+    postNewMovie(formData);
+
+  });
+
+  function postNewMovie(formData){
+    fetch('http://localhost:8080/com.moviereview/webapi/moviereview/movies/add', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+    movieName: formData.get('movieName'),
+    desc:formData.get('desc'),
+    movieYear: formData.get('movieYear'),
+    movieLanguage: formData.get('movieLanguage'),
+    movieGenre: formData.get('movieGenre'),
+    smallPoster: formData.get('smallPoster'),
+    trailerUrl: formData.get('trailerUrl'),
+    actors:formData.get('actorName'),
+    writer:formData.get('writer'),
+    director:formData.get('director'),
+    production:formData.get('production')
+
+  })
+  })
+  .then(response => {
+    if (response.ok) {
+      console.log('Movie data sent successfully.');
+      sucessAlert();
+      // Reset form after successful submission if needed (desirable)
+
+      document.getElementById('movieForm').reset();
+    } else {
+      console.error('Error sending movie data:', response.statusText);
+    }
+  })
+  .catch(error => {
+    console.error('Error sending movie data:', error);
+  }); 
+  }
+  function sucessAlert(){
+    alert("Movie Added Successfully !!")
+  }
+</script>
+</body>
+</html>

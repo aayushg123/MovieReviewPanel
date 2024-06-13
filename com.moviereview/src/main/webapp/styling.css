@@ -1,0 +1,170 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+section {
+    padding-top: 5px;
+    padding-left: 10px;
+    margin-bottom: 20px;
+}
+
+form input, form button {
+    padding: 10px;
+    margin-right: 10px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#movieList {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+
+.movie-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+  }
+
+.movie-card {
+    margin: 20px;
+    width: 17em;
+    background-color: #1f2833;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .movie-card img {
+    max-width: 20em;
+    max-height: 20em;
+    transition: transform 0.3s; /* Add transition for smooth effect */
+  }
+  
+  .movie-card img:hover {
+    transform: scale(1.1); 
+    overflow: hidden;
+  }
+  
+  .movie-name {
+    margin: 10px 0;
+    height: 12vh;
+  }
+  
+  .rating {
+    font-size: 24px;
+  }
+  
+  .star {
+    color: #ffd700; /* golden color */
+    cursor: pointer;
+  }
+  
+  .actions {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    
+}
+  
+  .btn {
+    padding: 10px 20px;
+    margin: 5px 5px;
+    border: none;
+    background-color: #0b0c10;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: bold;
+  }
+  
+  .btn:hover {
+    background-color: #ffd700;
+    color: #0b0c10;
+  }
+  
+  .btn-i:hover{
+    border-top-left-radius: 40%;
+    border-bottom-right-radius: 40%;
+    
+  }
+  .user-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+  }
+.user-card {
+    margin: 20px;
+    max-width: 300px;
+    background-color: #1f2833;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+  }
+  #userList{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 86px;
+  }
+  .user-card img {
+    max-width: 15em;
+    max-height: 12em;
+    transition: transform 0.3s; /* Add transition for smooth effect */
+  }
+  
+  .user-card img:hover {
+    transform: scale(1.1); 
+    overflow: hidden;
+  }
+  .user-name {
+    margin: 10px 0;
+  }
+  .movie-misc{
+    position: relative;
+    bottom: 0;
+  }

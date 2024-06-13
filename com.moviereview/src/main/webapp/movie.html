@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="script.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+</head>
+<body>
+    <nav >
+        <label class="logo">Movie.com</label>
+        <div class="search">
+          <form action="#">
+              <input type="text" placeholder="Search Courses" name="search">
+              <button>
+                  <i class="fa fa-search" style="font-size: 18px;"></i>
+              </button>
+          </form>
+      </div>
+        <div class="userAvtar">
+          <ul>
+              <li><a class="active" href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          <img src="https://www.pngall.com/wp-content/uploads/12/Avatar-Profile-PNG-Photos.png" alt="avtarImg">
+          <p style="font-weight: bold;">userName</p>
+        </div>
+      </nav>
+
+      <div class="movie-container">
+        <div class="movie-info">
+            <div class="movie-media">
+                <img src="https://static.toiimg.com/photo/msid-95377115/95377115.jpg?1483" alt="Movie Poster">
+                <div class="trailer">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/mElpF6g67FA?si=t7XlO0b4OePdce-V&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    
+                </div>
+            </div>
+            <div class="movie-details">
+                <h2 class="movie-name"><span> >>> </span><span style="font-weight: bold; color: #fff;">Movie Title</span></h2>
+                <hr  >
+                <p class="description">Movie description goes hereMovie description goes hereMovie description goes hereMovie description goes hereMovie description goes hereMovie description goes hereMovie description goes here.</p>
+                <hr  >
+                <p class="genres"><span>Genres:</span>  Action, Drama, Thriller</p>
+                <hr  >
+                <p class="actors"><span>Actors:</span> Actor 1, Actor 2, Actor 3</p>
+                <hr  >
+                <p class="director"><span>Director:</span> Director Name</p>
+                <hr  >
+                <p class="length"><span>Length:</span> 2h 30min</p>
+                <hr  >
+                <p class="language"><span>Language:</span> English</p>
+                <hr  >
+            </div>
+        </div>
+      </div>
+
+
+      <div class="message-container">
+
+
+        
+
+
+
+
+
+
+
+
+
+        <div class="message-box ">
+            <div class="user-info">
+                <p><span style="font-weight: bold;">User Name</span></p>
+            </div>
+            <div class="message-description">
+                <p>This is the message description. .</p>
+            </div>
+            <div>
+                <i class="fa fa-thumbs-up" style="font-size:25px; color:black"></span><span style="font-size: 18px; font-weight: 500; color: black;"> Likes - <span>141</span></i>
+            </div>
+          </div>
+          <div class="message-box ">
+            <div class="user-info">
+                <p><span style="font-weight: bold;">User Name</span></p>
+            </div>
+            <div class="message-description">
+                <p>This is the message description. .</p>
+            </div>
+            <div>
+                <i class="fa fa-thumbs-up" style="font-size:25px; color:black"></span><span style="font-size: 18px; font-weight: 500; color: black;"> Likes - <span>141</span></i>
+            </div>
+          </div>
+          <div class="message-box ">
+            <div class="user-info">
+                <p><span style="font-weight: bold;">User Name</span></p>
+            </div>
+            <div class="message-description">
+                <p>This is the message description. .</p>
+            </div>
+            <div>
+                <i class="fa fa-thumbs-up" style="font-size:25px; color:black"></span><span style="font-size: 18px; font-weight: 500; color: black;"> Likes - <span>141</span></i>
+            </div>
+          </div>
+          <div class="message-box ">
+            <div class="user-info">
+                <p><span style="font-weight: bold;">User Name</span></p>
+            </div>
+            <div class="message-description">
+                <p>This is the message description. .</p>
+            </div>
+            <div>
+                <i class="fa fa-thumbs-up" style="font-size:25px; color:black"></span><span style="font-size: 18px; font-weight: 500; color: black;"> Likes - <span>141</span></i>
+            </div>
+          </div>
+
+          
+      </div>
+      
+      
+
+
+       <button id="myButton">+</button>
+        <div id="myPopup" class="popup">
+            <div class="popup-content" aria-labelledby="popupLabel" aria-describedby="popupDesc">
+                <h2 id="popupLabel">Add Your Review</h2>
+                <br>
+                <form id="popupForm">
+                    <input type="text" id="fname" name="fname" value="Great movie"><br>
+                    
+
+                    <p>Rating: 
+                        <span class="star-rating">
+                            <label for="rate-1" style="--i:1 color"><i class="fa-star"></i></label>
+                            <input type="radio" name="rating" id="rate-1" class="star-val" value="1">
+                            <label for="rate-2" style="--i:2"><i class="fa-star"></i></label>
+                            <input type="radio" name="rating" id="rate-2" class="star-val" value="2" checked>
+                            <label for="rate-3" style="--i:3"><i class="fa-star"></i></label>
+                            <input type="radio" name="rating" id="rate-3" class="star-val" value="3">
+                            <label for="rate-4" style="--i:4"><i class="fa-star"></i></label>
+                            <input type="radio" name="rating" id="rate-4" class="star-val" value="4">
+                            <label for="rate-5" style="--i:5"><i class="fa-star"></i></label>
+                            <input type="radio" name="rating" id="rate-5" class="star-val" value="5">
+                        </span>
+                    </p>
+                    
+                    <button type="submit" class="submit-btn" onclick="submitReview()">Submit</button>
+                </form>
+                
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+        <!-- add comment button -->
+        <script>
+            const myButton = document.getElementById("myButton");
+            const myPopup = document.getElementById("myPopup");
+            const closePopup = document.getElementById("closePopup");
+            const popupForm = document.getElementById("popupForm");
+            const fnameInput = document.getElementById("fname");
+    
+            myButton.addEventListener("click", function () {
+                myPopup.classList.add("show");
+                fnameInput.focus();
+            });
+    
+            closePopup.addEventListener("click", function () {
+                myPopup.classList.remove("show");
+            });
+    
+            popupForm.addEventListener("submit", function (event) {
+                event.preventDefault();
+                // Process form submission here
+                alert("Form submitted successfully!");
+                myPopup.classList.remove("show");
+            });
+    
+            window.addEventListener("click", function (event) {
+                if (event.target == myPopup) {
+                    myPopup.classList.remove("show");
+                }
+            });
+            
+            var radioButton = document.getElementById("star-val");
+            var value = radioButton.value;
+            console.log(value);
+
+            function submitReview(){
+                console.log("submit button triggered");
+            }
+            
+        </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
