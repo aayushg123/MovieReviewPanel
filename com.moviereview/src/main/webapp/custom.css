@@ -1,0 +1,87 @@
+@charset "ISO-8859-1";
+
+.navbar {
+    background-color: #333;
+    padding: 10px 20px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-right: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+}
+
+.property-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 20px;
+}
+
+#viewProp .property-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    width: 300px;
+    padding: 16px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    margin:2vh;
+}
+
+#viewProp .property-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+#viewProp .property-card h3 {
+    margin-top: 12px;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+#viewProp .property-card p {
+    margin-top: 8px;
+    font-size: 1rem;
+    color: #777;
+}
+
+#viewProp .property-card button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#viewProp .property-card button:hover {
+    background-color: #c82333;
+}
+
+#propList{
+	display:flex;
+	flex-direction:row;
+	flex-wrap:wrap;
+	
+}
